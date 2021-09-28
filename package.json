@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-create-console-app",
+  "version": "1.0.0",
+  "description": "Creating a simple console application in node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "start:dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlehFilyak/nodejs-create-console-app.git"
+  },
+  "keywords": ["console", "aplication", "nodejs" ],
+  "author": "Oleh Filiak <oleh.filyak92@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlehFilyak/nodejs-create-console-app/issues"
+  },
+  "homepage": "https://github.com/OlehFilyak/nodejs-create-console-app#readme"
+}
