@@ -11,11 +11,18 @@
     "type": "git",
     "url": "git+https://github.com/OlehFilyak/nodejs-create-console-app.git"
   },
-  "keywords": ["console", "aplication", "nodejs" ],
+  "keywords": [
+    "console",
+    "aplication",
+    "nodejs"
+  ],
   "author": "Oleh Filiak <oleh.filyak92@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/OlehFilyak/nodejs-create-console-app/issues"
   },
-  "homepage": "https://github.com/OlehFilyak/nodejs-create-console-app#readme"
+  "homepage": "https://github.com/OlehFilyak/nodejs-create-console-app#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
 }
