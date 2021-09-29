@@ -4,8 +4,8 @@
   "description": "Creating a simple console application in node.js",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
-    "start:dev": "nodemon app"
+    "start": "NODE_ENV=production node index",
+    "start:dev": "NODE_ENV=development nodemon index"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,9 @@
   "homepage": "https://github.com/OlehFilyak/nodejs-create-console-app#readme",
   "devDependencies": {
     "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "commander": "^8.2.0",
+    "nanoid": "^3.1.28"
   }
 }
