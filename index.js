@@ -1,12 +1,11 @@
 const { Command } = require("commander");
-const dotenv = require("dotenv").config();
 
 const {
   getAllContacts,
   getContactById,
-  removeContact,
+  removeContactById,
   addContact,
-} = require("./contacts");
+} = require("./contacts/index");
 
 const program = new Command();
 program
@@ -21,25 +20,29 @@ program.parse(process.argv);
 const argv = program.opts();
 
 function invokeAction({ action, id, name, email, phone }) {
-  switch (action) {
-    case "list":
-      getAllContacts().then(data => console.table(data)); //node index -a list
-      break;
+  try {
+    switch (action) {
+      case "list":
+        getAllContacts().then(data => console.table(data)); //node index -a list
+        break;
 
-    case "get":
-      getContactById(id).then(data => console.table(data)); //node index -a list
-      break;
+      case "get":
+        getContactById(id).then(data => console.table(data)); //node index -a list
+        break;
 
-    case "add":
-      addContact(name, email, phone).then(data => console.log(data));
-      break;
+      case "add":
+        addContact(name, email, phone).then(data => console.log(data));
+        break;
 
-    case "remove":
-      removeContact(id).then(data => console.log(data));
-      break;
+      case "remove":
+        removeContactById(id).then(data => console.log(data));
+        break;
 
-    default:
-      console.warn("\x1B[31m Unknown action type!");
+      default:
+        console.warn("\x1B[31m Unknown action type!");
+    }
+  } catch (err) {
+    throw err;
   }
 }
 
