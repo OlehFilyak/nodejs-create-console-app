@@ -19,23 +19,23 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
-function invokeAction({ action, id, name, email, phone }) {
+async function invokeAction({ action, id, name, email, phone }) {
   try {
     switch (action) {
       case "list":
-        getAllContacts().then(data => console.table(data)); //node index -a list
+        await getAllContacts().then(data => console.table(data)); //node index -a list
         break;
 
       case "get":
-        getContactById(id).then(data => console.table(data)); //node index -a list
+        await getContactById(id).then(data => console.table(data)); //node index -a list
         break;
 
       case "add":
-        addContact(name, email, phone).then(data => console.log(data));
+        await addContact(name, email, phone).then(data => console.table(data));
         break;
 
       case "remove":
-        removeContactById(id).then(data => console.log(data));
+        await removeContactById(id).then(data => console.table(data));
         break;
 
       default:
